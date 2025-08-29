@@ -9,6 +9,7 @@ import AddAndEditUser from "../components/AddAndEditUser";
 const Interns = () => {
   const { interns, totalUsers, isPending } = useFetchUsers();
   const [activeInternId, setActiveInternId] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
 
   if (isPending)
     return (
@@ -19,10 +20,20 @@ const Interns = () => {
   return (
     <>
       <div className="h-full">
-        <div className="flex items-center justify-between p-3 dark:text-white">
+        <div className="flex items-center justify-between p-3 dark:text-white flex-wrap">
           <h1 className="lg:text-[2.5rem] text-3xl font-semibold">
             All Interns
           </h1>
+          <div className="w-[30%] hidden md:block">
+            <input
+              type="text"
+              className="w-full h-[30px] lg:h-[40px] bg-gray-200 px-2 pl-4 text-gray-900 border border-gray-300"
+              placeholder="search user..."
+              required
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+          </div>
           <Modal>
             <Modal.Open opens="add_intern">
               <button className="border px-3 lg:px-[20px] py-[5px] lg:py-[10px] rounded bg-green-700 text-white flex items-center justify-center p-2 md:p-1 md:px-4 gap-1 transition-all duration-300 hover:bg-green-900 cursor-pointer dark:border-[#3A3A55]">
@@ -33,18 +44,37 @@ const Interns = () => {
               <AddAndEditUser />
             </Modal.Window>
           </Modal>
+          <div className="w-[100%] mx-auto mt-3 md:hidden">
+            <input
+              type="text"
+              className="w-full h-[35px] bg-gray-200 px-2 pl-4 text-gray-900 rounded"
+              placeholder="search user..."
+              required
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+          </div>
         </div>
         <Modal>
           <div className="h-[calc(100%-180px)] lg:h-[calc(100%-140px)]">
-            <div className="h-full py-4 px-2 flex gap-2 justify-start gap-y-5 lg:gap-y-10 content-start lg:justify-start flex-wrap overflow-y-auto">
-              {interns?.map((intern, index) => (
-                <Modal.Open key={intern?.id ?? index} opens={`intern_${index}`}>
-                  <InternCard
-                    intern={intern}
-                    onClick={() => setActiveInternId(index)}
-                  />
-                </Modal.Open>
-              ))}
+            <div className="h-full py-4 px-2 flex gap-2 justify-start gap-y-5 lg:gap-y-10 content-start flex-wrap overflow-y-auto lg:justify-start">
+              {interns
+                .filter((intern) =>
+                  intern?.name
+                    ?.toLowerCase()
+                    ?.includes(searchTerm?.toLowerCase())
+                )
+                ?.map((intern, index) => (
+                  <Modal.Open
+                    key={intern?.id ?? index}
+                    opens={`intern_${index}`}
+                  >
+                    <InternCard
+                      intern={intern}
+                      onClick={() => setActiveInternId(index)}
+                    />
+                  </Modal.Open>
+                ))}
             </div>
           </div>
 
