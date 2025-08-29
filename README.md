@@ -41,20 +41,20 @@ The project demonstrates modern React practices, API integration, CRUD functiona
 
 ### Dashboard View (PC & Mobile Dark Mode)
 
-![Dashboard Screenshot](./assets/pc_dark1.png)
-![Dashboard Screenshot](./assets/mb_dark1.png)
-![Dashboard Screenshot](./assets/mb_dark2.png)
+![Dashboard Screenshot](./public/pc_dark1.png)
+![Dashboard Screenshot](./public/mb_dark1.png)
+![Dashboard Screenshot](./public/mb_dark2.png)
 
 ### Dashboard View (PC & Mobile Light Mode)
 
-![Dashboard Screenshot](./assets/pc_light1.png)  
-![Dashboard Screenshot](./assets/pc_light2.png)  
-![Dashboard Screenshot](./assets/pc_light3.png)  
-![Dashboard Screenshot](./assets/pc_light4.png)
-![Dashboard Screenshot](./assets/mb_light1.png)  
-![Dashboard Screenshot](./assets/mb_light2.png)  
-![Dashboard Screenshot](./assets/mb_light3.png)  
-![Dashboard Screenshot](./assets/mb_light4.png)
+![Dashboard Screenshot](./public/pc_light1.png)  
+![Dashboard Screenshot](./public/pc_light2.png)  
+![Dashboard Screenshot](./public/pc_light3.png)  
+![Dashboard Screenshot](./public/pc_light4.png)
+![Dashboard Screenshot](./public/mb_light1.png)  
+![Dashboard Screenshot](./public/mb_light2.png)  
+![Dashboard Screenshot](./public/mb_light3.png)  
+![Dashboard Screenshot](./public/mb_light4.png)
 
 ---
 
