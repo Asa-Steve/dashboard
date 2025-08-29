@@ -1,18 +1,99 @@
-<<<<<<< HEAD
+# ISentry Internship – Frontend Assessment 🚀
 
-# React + Vite
+A responsive mini-dashboard web application built as part of the **ISentry Frontend Internship Practical Challenge**.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The project demonstrates modern React practices, API integration, CRUD functionality, and user experience enhancements such as theme toggling, prefetching, and notifications.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- **Responsive Layout**: Sidebar navigation, top navbar with logo/profile/theme toggle, and adaptive main content.
+- **Data Management**:
+  - Fetches and paginate user data from [JSONPlaceholder](https://jsonplaceholder.typicode.com/).
+  - Implements **CRUD** (Create, Read, Update, Delete) operations.
+- **Prefetching**: Optimized with **TanStack Query** for smooth data loading.
+- **Search Functionality**: Filter users by name.
+- **Theme Toggle**: Light/Dark mode support.
+- **User Experience**:
+  - Toast notifications using **react-hot-toast**.
+  - Forms with **react-hook-form** for validation and handling.
+  - Icons via **react-icons**.
+  - Smooth modal/details view for user info.
+  - **Dummy Profile Images** via [UI Avatars API](https://ui-avatars.com/).
 
-# If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
 
-# dashboard
+## 🛠️ Tech Stack
 
-> > > > > > > 645b4baa82af4c2ba3389624bf31e039901bbfc4
+- **React.js** – Core framework
+- **Tailwind CSS** – Utility-first styling
+- **TanStack Query** – Data fetching, caching, and mutations
+- **React Hook Form** – Form handling and validation
+- **React Hot Toast** – Notifications
+- **React Icons** – Iconography
+- **JSONPlaceholder API** – Mock backend for users/posts
+- **UI Avatars API** – Placeholder profile images
+
+---
+
+## 📸 Screenshots
+
+### Dashboard View (PC & Mobile Dark Mode)
+
+![Dashboard Screenshot](./assets/pc_dark1.png)
+![Dashboard Screenshot](./assets/mb_dark1.png)
+![Dashboard Screenshot](./assets/mb_dark2.png)
+
+### Dashboard View (PC & Mobile Light Mode)
+
+![Dashboard Screenshot](./assets/pc_light1.png)  
+![Dashboard Screenshot](./assets/pc_light2.png)  
+![Dashboard Screenshot](./assets/pc_light3.png)  
+![Dashboard Screenshot](./assets/pc_light4.png)
+![Dashboard Screenshot](./assets/mb_light1.png)  
+![Dashboard Screenshot](./assets/mb_light2.png)  
+![Dashboard Screenshot](./assets/mb_light3.png)  
+![Dashboard Screenshot](./assets/mb_light4.png)
+
+---
+
+## ⚡ Getting Started
+
+### Prerequisites
+
+- Node.js (v16+)
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repo
+git clone https://github.com/Asa-Steve/dashboard.git
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+```
+
+---
+
+## 🌍 Live Demo
+
+Deployed on [Vercel](https://dashboard-plum-chi.vercel.app/interns).
+
+---
+
+## 🚀 Future Improvements
+
+- Enhance error handling for API requests.
+- Improve accessibility (ARIA roles, keyboard navigation).
+- Add animations for smoother transitions.
+
+---
+
+## 📌 Assessment Reference
+
+This project was built following the **ISentry Internship – Frontend Assessment** requirements.
